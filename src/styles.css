@@ -1,3 +1,15 @@
 h1 {
   text-align: center;
 }
+
+.jumbotron {
+  background-image: url("./assets/telefire.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+.jumbotron h1 {
+  color: white !important;
+}
