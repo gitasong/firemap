@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes, RouterModule } from '@angular/router';
 import { routing } from './app.routing';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -19,7 +20,10 @@ import { MapComponent } from './map/map.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD3-uLsBok9DwY4Y_jEZFVShjrFAh5lcHc'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

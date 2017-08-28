@@ -1,8 +1,7 @@
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h5>Oregon Fire Incidents</h5>
-  </div>
-  <div class="panel-body">
-    <p>map works!</p>
-  </div>
-</div>
+<h1>{{ title }}</h1>
+
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
