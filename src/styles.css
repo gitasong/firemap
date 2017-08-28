@@ -13,3 +13,7 @@ h1 {
 .jumbotron h1 {
   color: white !important;
 }
+
+agm-map {
+  height: 500px;
+}
