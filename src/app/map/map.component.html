@@ -2,6 +2,7 @@
 
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
-<agm-map [zoom]="zoom" [mapTypeId]="type" [latitude]="lat" [longitude]="lng">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+<agm-map [mapTypeId]="type" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <agm-marker *ngFor="let w of wildfires; let i = index;" (markerClick)="clickedMarker(w, i)" [latitude]="w.lat" [longitude]="w.lng"></agm-marker>
+
 </agm-map>
