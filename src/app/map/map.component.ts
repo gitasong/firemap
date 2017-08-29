@@ -9,9 +9,11 @@ import { Wildfire } from '../wildfire.model';
   providers: [WildfireApiService]
 })
 export class MapComponent implements OnInit {
-  lat: number = 45.512794;
-  lng: number = -122.679565;
-  zoom: number = 5;
+
+  lat: number = 43.8136;
+  lng: number = -120.6027;
+  type: string = 'terrain';
+  zoom: number = 7;
   wildfires: Wildfire[] = [];
 
   constructor(private wildfireData: WildfireApiService) { }
