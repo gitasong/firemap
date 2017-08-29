@@ -5,6 +5,6 @@
 
 <agm-map [mapTypeId]="type" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
   <agm-marker *ngFor="let w of wildfires; let i = index;" (markerClick)="clickedMarker(w, i)" [latitude]="w.lat" [longitude]="w.lng">
-    <agm-info-window><strong>{{w.title}}</strong><br>{{w.description}}</agm-info-window>
+    <agm-info-window><strong>{{w.title}}</strong><br><a href="{{w.description}}">{{w.description}}</a> </agm-info-window>
   </agm-marker>
 </agm-map>
