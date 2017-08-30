@@ -1,30 +1,8 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3>Oregon Wildfires Photo Gallery</h3>
+    <h3>Oregon Wildfires Photo Galleries</h3>
   </div>
-  <div class="panel-body">
-    <div class="row">
-      <div class="col-md-4">
-        <h5>High Cascades Complex Fire</h5>
-        <h5>Chetco Bar Fire</h5>
-        <h5>Cinder Butte Fire</h5>
-        <h5>Falcon Complex Fire</h5>
-        <h5>Horse Creek Complex Fire</h5>
-      </div>
-      <div class="col-md-4">
-        <h5>Jones Fire</h5>
-        <h5>Miller Complex Fire</h5>
-        <h5>Milli Fire</h5>
-        <h5>Nena Springs Fire</h5>
-        <h5>North Pelican Fire</h5>
-      </div>
-      <div class="col-md-4">
-        <h5>Rebel Fire</h5>
-        <h5>Staley Fire</h5>
-        <h5>Umpqua North Complex Fire</h5>
-        <h5>Upper Mine Fire</h5>
-        <h5>Whitewater Fire</h5>
-      </div>
-    </div>
+  <div *ngFor="let gallery of galleries" (click)="goToDetailPage(gallery)" class="panel-body">
+    <h5>{{gallery.name}}</h5>
   </div>
 </div>

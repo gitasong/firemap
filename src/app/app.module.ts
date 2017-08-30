@@ -10,13 +10,15 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MapComponent } from './map/map.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryDetailComponent } from './gallery-detail/gallery-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     MapComponent,
-    GalleryComponent
+    GalleryComponent,
+    GalleryDetailComponent
   ],
   imports: [
     BrowserModule,
