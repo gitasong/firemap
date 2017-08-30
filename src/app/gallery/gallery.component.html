@@ -1,0 +1,8 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Oregon Wildfires Photo Galleries</h3>
+  </div>
+  <div *ngFor="let gallery of galleries" (click)="goToDetailPage(gallery)" class="panel-body">
+    <h5>{{gallery.name}}</h5>
+  </div>
+</div>
