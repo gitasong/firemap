@@ -9,12 +9,14 @@ import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { MapComponent } from './map/map.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    MapComponent
+    MapComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
