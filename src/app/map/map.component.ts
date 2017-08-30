@@ -18,6 +18,18 @@ export class MapComponent implements OnInit {
   constructor(private wildfireData: WildfireApiService) { }
 
   initMap() {
+    var oregon = {lat: 43.8136, lng: -120.6027};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 6,
+      center: oregon,
+      mapTypeId: 'terrain'
+    });
+    for(var i = 0; i < this.wildfires.length; i++) {
+      var marker = new google.maps.Marker({
+        position: {lat: this.wildfires[i].lat, lng: this.wildfires[i].lng},
+        map: map
+      });
+    }
   }
 
 
@@ -33,23 +45,12 @@ export class MapComponent implements OnInit {
         var newWildfire = new Wildfire(title, description, lat, lng);
         this.wildfires.push(newWildfire)
       }
-      var oregon = {lat: 43.8136, lng: -120.6027};
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center: oregon,
-        mapTypeId: 'terrain'
-      });
-      for(var i = 0; i < this.wildfires.length; i++) {
-        var marker = new google.maps.Marker({
-          position: {lat: this.wildfires[i].lat, lng: this.wildfires[i].lng},
-          map: map
-        });
-      }
+      this.initMap()
     })
   }
 
   ngOnInit() {
-      this.getWildfireData()
+    this.getWildfireData()
   }
 }
 
