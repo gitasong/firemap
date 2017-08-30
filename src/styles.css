@@ -3,7 +3,7 @@ h1 {
 }
 
 .jumbotron {
-  background-image: url("./assets/telefire.jpg");
+  background-image: url("./assets/images/telefire.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   font-style: italic;
