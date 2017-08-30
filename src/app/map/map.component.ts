@@ -23,26 +23,27 @@ export class MapComponent implements OnInit {
     }
     var oregon = {lat: 43.8136, lng: -120.6027};
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 6,
+      zoom: 5,
       center: oregon,
       mapTypeId: 'terrain'
     });
+
     for(var i = 0; i < this.wildfires.length; i++) {
+      var title = this.wildfires[i].title;
+      var description = this.wildfires[i].description;
       var marker = new google.maps.Marker({
         position: {lat: this.wildfires[i].lat, lng: this.wildfires[i].lng},
         map: map,
         animation: google.maps.Animation.DROP,
-        icon: image
-      });
-      var title = this.wildfires[i].title;
-      var description = this.wildfires[i].description;
-
-      var infowindow = new google.maps.InfoWindow({
-        content: title + "<br>" + description
+        icon: image,
+        title: title,
+        description: description
       });
       marker.addListener('click', function() {
-        infowindow.open(map, marker);
-        console.log(marker);
+        var infowindow = new google.maps.InfoWindow({
+          content: this.title + "<br>" + '<a href=' + this.description + '>' + this.description + '</a>'
+        });
+        infowindow.open(map, this);
       });
     }
   }
@@ -68,9 +69,9 @@ export class MapComponent implements OnInit {
   }
 }
 
-interface marker {
-  title?:string;
-  description: string;
-  lat: number;
-  lng: number;
-}
+// interface marker {
+//   title?:string;
+//   description: string;
+//   lat: number;
+//   lng: number;
+// }
