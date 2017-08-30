@@ -1,4 +1,5 @@
 <div class="container">
   <h2>{{galleryToDisplay.name}}</h2>
-  <p><img src="{{galleryToDisplay.images}}"></p>
+  <p>Images sourced at the InciWeb individual fire links found on the map.</p>
+  <p *ngFor="let image of galleryToDisplay.images"><img src="{{image}}"></p>
 </div>
