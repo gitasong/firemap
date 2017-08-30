@@ -23,6 +23,6 @@ h1 {
   font-family: sans-serif;
 }
 
-agm-map {
+#map {
   height: 500px;
 }
