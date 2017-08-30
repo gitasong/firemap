@@ -1,3 +1,4 @@
 export class Wildfire {
-  constructor(private title: string, private description: string, private lat: number, private lng: number) {}
+  public img: string;
+  constructor(public title: string, public description: string, public lat: number, public lng: number) {}
 }

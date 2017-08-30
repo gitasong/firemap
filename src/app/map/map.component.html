@@ -1,10 +1,3 @@
 <h1>{{ title }}</h1>
 
-<!-- this creates a google map on the page with the given lat/lng from -->
-<!-- the component as the initial center of the map: -->
-
-<agm-map [mapTypeId]="type" [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-  <agm-marker *ngFor="let w of wildfires; let i = index;" (markerClick)="clickedMarker(w, i)" [latitude]="w.lat" [longitude]="w.lng">
-    <agm-info-window><strong>{{w.title}}</strong><br><a href="{{w.description}}">{{w.description}}</a> </agm-info-window>
-  </agm-marker>
-</agm-map>
+<div id="map"></div>
