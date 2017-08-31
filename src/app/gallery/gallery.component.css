@@ -1,7 +1,8 @@
 .panel-heading {
-  background-image: url("/assets/images/telefire.jpg");
+  /*background-image: url("/assets/images/telefire.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
+  background-color: black;
   color: white;
 }
 
