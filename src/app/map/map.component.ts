@@ -24,7 +24,8 @@ export class MapComponent implements OnInit {
     });
 
     var georssLayer = new google.maps.KmlLayer({
-          url: 'https://inciweb.nwcg.gov/feeds/maps/kml/?cm.ttl=600'
+          url: 'https://inciweb.nwcg.gov/feeds/maps/kml/?cm.ttl=600',
+          map: map
         });
         georssLayer.setMap(map);
 
