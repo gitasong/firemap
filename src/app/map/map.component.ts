@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WildfireApiService } from '../wildfire-api.service'
 import { Wildfire } from '../wildfire.model';
 import { MapsAPILoader } from 'angular2-google-maps/core';
+import { masterGoogleMapConfig } from '../api-keys';
 
 declare var google;
 
