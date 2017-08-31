@@ -7,13 +7,48 @@
 }
 
 .panel-body {
-  background-image: url("/assets/images/wildfire.jpg");
+  /*background-image: url("/assets/images/wildfire.jpg");
   background-position: center;
   background-repeat: no-repeat;
   color: black;
-  text-shadow: 1px 1px white;
+  text-shadow: 1px 1px white;*/
+  display: grid;
+  overflow: hidden;
+  background-color: #000000;
 }
 
-.panel-height {
-  height: 400px;
+/*.panel-height {
+  height: 800px;
+}*/
+
+.panel-image {
+  align-self: stretch;
+  /*height: inherit;*/
+  position: relative;
+  overflow: hidden;
+}
+
+.firefighter {
+  width: 100%;
+  height: 100%;
+}
+
+.panel-listings {
+  position: absolute;
+  overflow-y: scroll;
+  right: 80%;
+  height: 100%;
+  background-color: rgba(250, 210, 28, 0.7);
+  padding: 3rem 2rem 2rem 2rem;
+  line-height: 1.7rem;
+  z-index: 999;
+}
+
+.panel-listings::-webkit-scrollbar {
+  background-color: rgba(250, 210, 28, 0.3);
+}
+
+.panel-listings::-webkit-scrollbar-thumb {
+  background-color: rgba(225, 185, 5, 1);
+  min-height: 20px !important;
 }
