@@ -18,14 +18,9 @@ export class MapComponent implements OnInit {
   constructor(private wildfireData: WildfireApiService) { }
 
   initMap() {
-    var image = {
-      url: "../assets/Fire_Emoji_grande.png",
-    }
-    var oregon = {lat: 43.8136, lng: -120.6027};
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 5,
-      center: oregon,
-      mapTypeId: 'terrain'
+      zoom: 7,
+      center: {lat: 43.8136, lng: -120.6027}
     });
 
     var georssLayer = new google.maps.KmlLayer({
@@ -34,24 +29,24 @@ export class MapComponent implements OnInit {
         georssLayer.setMap(map);
 
 
-    // for(var i = 0; i < this.wildfires.length; i++) {
-    //   var title = this.wildfires[i].title;
-    //   var description = this.wildfires[i].description;
-    //   var marker = new google.maps.Marker({
-    //     position: {lat: this.wildfires[i].lat, lng: this.wildfires[i].lng},
-    //     map: map,
-    //     animation: google.maps.Animation.DROP,
-    //     icon: image,
-    //     title: title,
-    //     description: description
-    //   });
-    //   marker.addListener('click', function() {
-    //     var infowindow = new google.maps.InfoWindow({
-    //       content: this.title + "<br>" + '<a href=' + this.description + '>' + this.description + '</a>'
-    //     });
-    //     infowindow.open(map, this);
-    //   });
-    // }
+  //   for(var i = 0; i < this.wildfires.length; i++) {
+  //     var title = this.wildfires[i].title;
+  //     var description = this.wildfires[i].description;
+  //     var marker = new google.maps.Marker({
+  //       position: {lat: this.wildfires[i].lat, lng: this.wildfires[i].lng},
+  //       map: map,
+  //       animation: google.maps.Animation.DROP,
+  //       icon: image,
+  //       title: title,
+  //       description: description
+  //     });
+  //     marker.addListener('click', function() {
+  //       var infowindow = new google.maps.InfoWindow({
+  //         content: this.title + "<br>" + '<a href=' + this.description + '>' + this.description + '</a>'
+  //       });
+  //       infowindow.open(map, this);
+  //     });
+  //   }
   }
 
   getWildfireData() {
