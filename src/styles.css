@@ -26,3 +26,7 @@ h1 {
 #map {
   height: 500px;
 }
+
+.tip-list {
+  list-style-image: url("./assets/Fire_Emoji_grande.png");
+}
