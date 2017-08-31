@@ -12,6 +12,11 @@ import { MapComponent } from './map/map.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryDetailComponent } from './gallery-detail/gallery-detail.component';
 import { SafetyComponent } from './safety/safety.component';
+import { masterGoogleMapConfig } from './api-keys';
+
+export const googleMapConfig = {
+  apiKey: masterGoogleMapConfig.apiKey,
+};
 
 @NgModule({
   declarations: [
@@ -27,9 +32,9 @@ import { SafetyComponent } from './safety/safety.component';
     FormsModule,
     HttpModule,
     routing,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD3-uLsBok9DwY4Y_jEZFVShjrFAh5lcHc'
-    })
+    AgmCoreModule.forRoot({}),
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,44 @@
 # Firemap
 
+## Wildfire Map 08/31/2017
+
+_Group Project By Nicole Freed, Dylan Lewis, Jacob Ruleaux, Nathan Stewart_
+
+## Description
+
+The application displays current wild fire locations on a map of the U.S. Additional fire data is displayed by clicking on the fire icon.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
+
+## Prerequisites
+
+* [Node.js](https://nodejs.org/) (with NPM)
+* [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+
+* Once installed, you will need to install bower globally:
+* `$ npm install bower -g`
+
+## Configuration/Dependencies
+
+* angular-cli
+* angularFire
+* bower
+* bootstrap
+
+The app will use angular-cli and assets and dependencies packaged with it.
+
+## Setup/Installation
+
+* `$ git clone <repository-url>` this repository
+* `$ cd <repository-name>`
+* `$ npm install`
+* `$ bower install`
+
+#### API Keys
+
+* Get a API key from [Google Maps](https://developers.google.com/maps/documentation/javascript/get-api-key)
+* API install instructions here...
+
 
 ## Development server
 
