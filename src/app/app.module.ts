@@ -11,6 +11,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { MapComponent } from './map/map.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryDetailComponent } from './gallery-detail/gallery-detail.component';
+import { SafetyComponent } from './safety/safety.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GalleryDetailComponent } from './gallery-detail/gallery-detail.componen
     HomePageComponent,
     MapComponent,
     GalleryComponent,
-    GalleryDetailComponent
+    GalleryDetailComponent,
+    SafetyComponent
   ],
   imports: [
     BrowserModule,
