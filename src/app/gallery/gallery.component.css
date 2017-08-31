@@ -1,13 +1,19 @@
 .panel-heading {
-  background-image: url("/assets/images/telefire.jpg");
+  /*background-image: url("/assets/images/telefire.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat;*/
+  background-color: black;
   color: white;
 }
 
 .panel-body {
-  background-image: url("/assets/images/telefire.jpg");
-  background-size: cover;
+  background-image: url("/assets/images/wildfire.jpg");
+  background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  color: black;
+  text-shadow: 1px 1px white;
+}
+
+.panel-height {
+  height: 400px;
 }
