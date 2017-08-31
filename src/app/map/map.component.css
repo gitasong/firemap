@@ -5,18 +5,18 @@
   padding: 0;
 }*/
 
-.wildfires, .wildfires svg {
+.fires, .fires svg {
   position: absolute;
 }
 
-.wildfires svg {
+.fires svg {
   width: 60px;
   height: 20px;
   padding-right: 100px;
   font: 10px sans-serif;
 }
 
-.wildfires circle {
+.fires circle {
   fill: brown;
   stroke: black;
   stroke-width: 1.5px;

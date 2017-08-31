@@ -15,14 +15,15 @@ declare var google;
 
 export class MapComponent implements OnInit {
   wildfires: Wildfire[] = [];
-  dataset = this.wildfires;
+  dataset = [];
 
   constructor(private wildfireData: WildfireApiService) { }
 
   initMap() {
-    var image = {
-      url: "../assets/Fire_Emoji_grande.png",
-    }
+    console.log(this.dataset);
+    // var image = {
+    //   url: "../assets/Fire_Emoji_grande.png",
+    // }
     var oregon = {lat: 43.8136, lng: -120.6027};
     var map = new google.maps.Map(d3.select("#map").node(), {
       zoom: 5,
@@ -32,8 +33,12 @@ export class MapComponent implements OnInit {
 
     var overlay = new google.maps.OverlayView();
     overlay.onAdd = function() {
-    var layer = d3.select(this.getPanes().overlayLayer).append("div")
-        .attr("class", "wildfires");
+    // if (overlay) {
+      console.log(overlay);
+    // }
+    var layer = d3.select(overlay.getPanes().overlayLayer).append("div")
+        .attr("class", "fires");
+          console.log(overlay.getPanes().overlayLayer);
 
         // Draw each marker as a separate SVG element.
         // We could use a single SVG, but what size would it have?
@@ -41,12 +46,15 @@ export class MapComponent implements OnInit {
           var projection = this.getProjection(),
               padding = 10;
 
+          console.log(d3.entries(this.dataset)); // Not getting the dataset in
+
           var marker = layer.selectAll("svg")
               .data(d3.entries(this.dataset))
               .each(transform) // update existing markers
               .enter().append("svg")
               .each(transform)
               .attr("class", "marker");
+          console.log(marker);
 
           // Add a circle.
           marker.append("circle")
@@ -73,31 +81,12 @@ export class MapComponent implements OnInit {
 
       // Bind our overlay to the map…
       overlay.setMap(map);
-
-    // for(var i = 0; i < this.wildfires.length; i++) {
-    //   var title = this.wildfires[i].title;
-    //   var description = this.wildfires[i].description;
-    //   var marker = new google.maps.Marker({
-    //     position: {lat: this.wildfires[i].lat, lng: this.wildfires[i].lng},
-    //     map: map,
-    //     animation: google.maps.Animation.DROP,
-    //     icon: image,
-    //     title: title,
-    //     description: description
-    //   });
-    //   marker.addListener('click', function() {
-    //     var infowindow = new google.maps.InfoWindow({
-    //       content: this.title + "<br>" + '<a href=' + this.description + '>' + this.description + '</a>'
-    //     });
-    //     infowindow.open(map, this);
-    //   });
-    // }
   }
 
   getWildfireData() {
     this.wildfireData.getWildfireData().subscribe(response => {
       var call = response.json();
-      console.log(call);
+      // console.log(call);
       for(var i = 0; i < call.events.length; i++) {
         var title = call.events[i].title;
         var description = call.events[i].sources[0].url;
@@ -106,6 +95,11 @@ export class MapComponent implements OnInit {
         var newWildfire = new Wildfire(title, description, lat, lng);
         this.wildfires.push(newWildfire)
       }
+      for(var i = 0; i < this.wildfires.length; i++) {
+        var fire: number[] = [this.wildfires[i].lat, this.wildfires[i].lng];
+        this.dataset.push(fire)
+      }
+      // console.log(this.dataset);
       this.initMap()
     })
   }
