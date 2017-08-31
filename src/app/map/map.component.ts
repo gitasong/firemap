@@ -28,24 +28,30 @@ export class MapComponent implements OnInit {
       mapTypeId: 'terrain'
     });
 
-    for(var i = 0; i < this.wildfires.length; i++) {
-      var title = this.wildfires[i].title;
-      var description = this.wildfires[i].description;
-      var marker = new google.maps.Marker({
-        position: {lat: this.wildfires[i].lat, lng: this.wildfires[i].lng},
-        map: map,
-        animation: google.maps.Animation.DROP,
-        icon: image,
-        title: title,
-        description: description
-      });
-      marker.addListener('click', function() {
-        var infowindow = new google.maps.InfoWindow({
-          content: this.title + "<br>" + '<a href=' + this.description + '>' + this.description + '</a>'
+    var georssLayer = new google.maps.KmlLayer({
+          url: 'https://inciweb.nwcg.gov/feeds/maps/kml/?cm.ttl=600'
         });
-        infowindow.open(map, this);
-      });
-    }
+        georssLayer.setMap(map);
+
+
+    // for(var i = 0; i < this.wildfires.length; i++) {
+    //   var title = this.wildfires[i].title;
+    //   var description = this.wildfires[i].description;
+    //   var marker = new google.maps.Marker({
+    //     position: {lat: this.wildfires[i].lat, lng: this.wildfires[i].lng},
+    //     map: map,
+    //     animation: google.maps.Animation.DROP,
+    //     icon: image,
+    //     title: title,
+    //     description: description
+    //   });
+    //   marker.addListener('click', function() {
+    //     var infowindow = new google.maps.InfoWindow({
+    //       content: this.title + "<br>" + '<a href=' + this.description + '>' + this.description + '</a>'
+    //     });
+    //     infowindow.open(map, this);
+    //   });
+    // }
   }
 
   getWildfireData() {
