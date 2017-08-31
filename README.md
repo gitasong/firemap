@@ -21,7 +21,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Configuration/Dependencies
 
 * angular-cli
-* angularFire
 * bower
 * bootstrap
 
@@ -36,9 +35,9 @@ The app will use angular-cli and assets and dependencies packaged with it.
 
 #### API Keys
 
-* Get a API key from [Google Maps](https://developers.google.com/maps/documentation/javascript/get-api-key)
-* API install instructions here...
-
+* Get an API key from [Google Maps](https://developers.google.com/maps/documentation/javascript/get-api-key).
+* Create a file in your project app  folder called api-keys.ts.
+* Within the api-keys.ts file, type "export var masterGoogleMapConfig = { }" and paste your copied google map code between the curly braces. Be sure to add this file to .gitignore.
 
 ## Development server
 
@@ -64,3 +63,28 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+### License
+
+MIT License
+
+Copyright &copy; 2017 Nicole Freed, Dylan Lewis, Jacob Ruleaux, Nathan Stewart
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
