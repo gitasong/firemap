@@ -29,7 +29,7 @@ export class MapComponent implements OnInit {
           map: map
         });
         georssLayer.setMap(map);
-
+        
 
   //   for(var i = 0; i < this.wildfires.length; i++) {
   //     var title = this.wildfires[i].title;
