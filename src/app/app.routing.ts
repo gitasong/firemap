@@ -3,6 +3,7 @@ import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MapComponent } from './map/map.component';
 import { GalleryDetailComponent } from './gallery-detail/gallery-detail.component';
+import { SafetyComponent } from './safety/safety.component';
 
 const appRoutes: Routes = [
 
@@ -13,6 +14,10 @@ const appRoutes: Routes = [
   {
     path: 'galleries/:id',
     component: GalleryDetailComponent
+  },
+  {
+    path: 'safety',
+    component: SafetyComponent
   }
  ];
 
