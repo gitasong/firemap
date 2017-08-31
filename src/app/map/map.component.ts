@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WildfireApiService } from '../wildfire-api.service'
 import { Wildfire } from '../wildfire.model';
 import { MapsAPILoader } from 'angular2-google-maps/core';
+import * as d3 from "d3";
 
 declare var google;
 
@@ -22,7 +23,7 @@ export class MapComponent implements OnInit {
       url: "../assets/Fire_Emoji_grande.png",
     }
     var oregon = {lat: 43.8136, lng: -120.6027};
-    var map = new google.maps.Map(document.getElementById('map'), {
+    var map = new google.maps.Map(d3.select("#map").node(), {
       zoom: 5,
       center: oregon,
       mapTypeId: 'terrain'
