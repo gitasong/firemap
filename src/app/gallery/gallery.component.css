@@ -6,8 +6,12 @@
 }
 
 .panel-body {
-  background-image: url("/assets/images/telefire.jpg");
-  background-size: cover;
+  background-image: url("/assets/images/wildfire.jpg");
+  background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  color: black;
+}
+
+.panel-height {
+  height: 400px;
 }
