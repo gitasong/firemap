@@ -1,17 +1,17 @@
-  <div class="jumbotron">
-    <header>
-      <div class="container">
-        <h1>
-          {{title}}
-        </h1>
-        <p><a class="link" routerLink="">Home</a></p>
-        <p><a class="link" routerLink="safety">Fire Safety</a></p>
-      </div>
-    </header>
+
+<header>
+  <div class="container title">
+    <h1>
+      {{title}}
+    </h1>
   </div>
-  <!-- <div class="container">
-  </div> -->
-  <router-outlet></router-outlet>
+  <div class="container links">
+    <p><a class="link" routerLink="">Home</a></p>
+    <p><a class="link" routerLink="safety">Fire Safety</a></p>
+  </div>
+</header>
+<router-outlet></router-outlet>
+<footer></footer>
 
 
 
