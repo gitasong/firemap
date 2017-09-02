@@ -51,18 +51,29 @@ h1.title {
   padding: 2rem;
 }
 
-button.enter {
+.btn.enter, .map-buttons .btn {
   background-color: rgba(255, 255, 255, 0.0);
   color: #ffffff;
   border: 1px solid #ffffff;
+  border-radius: 0;
   padding: 1rem;
 }
 
-button.enter:hover {
+.btn.enter:hover, .map-buttons .btn:hover {
   background-color: rgba(255, 255, 255, 1);
   color: #000000;
   border: 1px solid #ffffff;
+  border-radius: 0;
   padding: 1rem;
+}
+
+.map-buttons button a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.map-buttons button a:hover {
+  color: #000000;
 }
 
 router-outlet {
