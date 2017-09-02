@@ -77,6 +77,7 @@ section, app-home-page {
 
 #map-component {
   background-color: #000000;
+  margin-top: 4rem;
 }
 
 footer {
@@ -105,7 +106,7 @@ h1 {
 
 .map-heading {
   color: #ffffff;
-  /*font-family: sans-serif;*/
+  margin-bottom: 4rem;
 }
 
 #map {
