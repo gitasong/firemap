@@ -33,9 +33,11 @@
   right: 81%;
   height: 100%;
   background-color: rgba(250, 210, 28, 0.7);
-  padding: 3rem 2rem 2rem 2rem;
-  line-height: 1.7rem;
+  padding: 1rem 2rem 2rem 2rem;
+  line-height: 1rem;
   z-index: 999;
+  display: flex;
+  flex-direction: column;
 }
 
 .panel-listings::-webkit-scrollbar {
@@ -45,4 +47,8 @@
 .panel-listings::-webkit-scrollbar-thumb {
   background-color: rgba(225, 185, 5, 1);
   min-height: 20px !important;
+}
+
+.panel-listing {
+
 }

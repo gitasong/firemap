@@ -1,12 +1,13 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3>Oregon Wildfires Photo Galleries</h3>
+    <h2>Oregon Wildfires Photo Galleries</h2>
   </div>
   <div class="panel-body">
     <div class="panel-image">
       <div class="panel-listings">
+        <h3>Wildfires</h3>
         <div *ngFor="let gallery of galleries" (click)="goToDetailPage(gallery)">
-          <h5>{{gallery.name}}</h5>
+          <h5 class="panel-listing">{{gallery.name}}</h5>
         </div>
       </div>
       <img src="/assets/images/wildfire_cropped.jpg" class="img-responsive firefighter" alt="Firefighter fighting a fire">
