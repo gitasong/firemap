@@ -1,25 +1,19 @@
+.panel {
+  border: none;
+}
+
 .panel-heading {
-  /*background-image: url("/assets/images/telefire.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;*/
   background-color: black;
   color: white;
+  border-bottom: none;
 }
 
 .panel-body {
-  /*background-image: url("/assets/images/wildfire.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  color: black;
-  text-shadow: 1px 1px white;*/
   display: grid;
   overflow: hidden;
   background-color: #000000;
+  padding: 0;
 }
-
-/*.panel-height {
-  height: 800px;
-}*/
 
 .panel-image {
   align-self: stretch;
@@ -36,7 +30,7 @@
 .panel-listings {
   position: absolute;
   overflow-y: scroll;
-  right: 80%;
+  right: 81%;
   height: 100%;
   background-color: rgba(250, 210, 28, 0.7);
   padding: 3rem 2rem 2rem 2rem;
