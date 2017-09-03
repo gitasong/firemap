@@ -53,6 +53,10 @@
   min-height: 20px !important;
 }
 
+h5.panel-listing {
+  margin-top: 0;
+}
+
 .panel-listing {
   color: #333333;
 }
