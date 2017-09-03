@@ -17,3 +17,6 @@
 <section>
   <app-gallery></app-gallery>
 </section>
+<section *ngIf="currentRoute === '/galleries/'">
+  <app-gallery-detail></app-gallery-detail>
+</section>
