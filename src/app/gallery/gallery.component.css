@@ -50,5 +50,10 @@
 }
 
 .panel-listing {
+  color: #333333;
+}
 
+.panel-listing:hover {
+  color: #666666;
+  cursor: pointer;
 }
