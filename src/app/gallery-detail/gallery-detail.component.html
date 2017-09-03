@@ -1,5 +1,11 @@
-<div class="container">
-  <h2>{{galleryToDisplay.name}}</h2>
-  <p>Images sourced at the InciWeb individual fire links found on the map.</p>
-  <p *ngFor="let image of galleryToDisplay.images"><img src="{{image}}"></p>
+<div class="container gallery-container">
+  <div class="gallery-head">
+    <h2>{{galleryToDisplay.name}}</h2>
+    <p>Images sourced at the InciWeb individual fire links found on the map.</p>
+  </div>
+  <div class="gallery-body">
+    <div *ngFor="let image of galleryToDisplay.images">
+      <img class="item-image" src="{{image}}">
+    </div>
+  </div>
 </div>
