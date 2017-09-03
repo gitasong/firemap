@@ -93,6 +93,8 @@ section, app-home-page {
 
 footer {
   height: 8rem;
+  color: #ffffff;
+  text-align: center;
 }
 
 h1 {
