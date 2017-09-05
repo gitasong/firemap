@@ -6,6 +6,14 @@
   color: #ffffff;
 }
 
+.gallery-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2rem;
+}
+
 .gallery-body {
   display: grid;
   grid-template-columns: 45% 45%;

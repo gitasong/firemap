@@ -1,7 +1,15 @@
 <div class="container gallery-container">
   <div class="gallery-head">
-    <h2>{{galleryToDisplay.name}}</h2>
-    <p>Images sourced at the InciWeb individual fire links found on the map.</p>
+    <div class="gallery-heading">
+      <h2>{{galleryToDisplay.name}}</h2>
+      <p>Images sourced at the InciWeb individual fire links found on the map.</p>
+    </div>
+    <div class="map-buttons">
+      <a class="btn" href="#home">Home</a>
+      <a class="btn" href="#gallery">Back to Gallery</a>
+      <a class="btn" href="#map-component">Fire Map</a>
+      <a class="btn" href="#safety">Fire Safety Tips</a>
+    </div>
   </div>
   <div class="gallery-body">
     <div *ngFor="let image of galleryToDisplay.images">

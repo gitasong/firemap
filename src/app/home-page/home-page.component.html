@@ -5,18 +5,21 @@
         <h4>Click points on the map to view current wildfire incident information.</h4>
       </div>
       <div class="map-buttons">
-        <a class="btn" routerLink="">Home</a>
-        <a class="btn" routerLink="app-gallery">Fire Gallery</a>
-        <a class="btn" routerLink="app-safety">Fire Safety Tips</a>
+        <a class="btn" href="#home">Home</a>
+        <a class="btn" href="#gallery">Fire Gallery</a>
+        <a class="btn" href="#safety">Fire Safety Tips</a>
       </div>
     </div>
     <div id="map-body">
       <app-map></app-map>
     </div>
 </section>
-<section>
+<section id="gallery">
   <app-gallery></app-gallery>
 </section>
-<section *ngIf="currentRoute === '/galleries/'">
+<section id="gallery-detail" *ngIf="currentRoute === '/galleries/'">
   <app-gallery-detail></app-gallery-detail>
+</section>
+<section id="safety">
+  <app-safety></app-safety>
 </section>

@@ -86,6 +86,19 @@ section, app-home-page {
   margin: 0;
 }
 
+section#gallery {
+  height: auto;
+}
+
+section#safety {
+  min-height: auto;
+}
+
+section#map-component {
+  height: auto;
+  padding-bottom: 8rem;
+}
+
 #map-component {
   background-color: #000000;
   margin-top: 4rem;
@@ -118,5 +131,5 @@ h1 {
 }
 
 .tip-list {
-  list-style-image: url("./assets/Fire_Emoji_grande.png");
+  list-style-image: url("./assets/Fire_Emoji_small.png");
 }
