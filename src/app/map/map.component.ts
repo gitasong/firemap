@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { WildfireApiService } from '../wildfire-api.service'
 import { Wildfire } from '../wildfire.model';
 import { MapsAPILoader } from 'angular2-google-maps/core';
@@ -10,6 +10,7 @@ declare var google;
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.css'],
+  encapsulation: ViewEncapsulation.None,
   providers: [WildfireApiService]
 })
 
@@ -20,6 +21,7 @@ export class MapComponent implements OnInit {
   constructor(private wildfireData: WildfireApiService) { }
 
   initMap() {
+    let wildfireData = this.dataset;
     console.log(this.dataset);
     // var image = {
     //   url: "../assets/Fire_Emoji_grande.png",
@@ -46,10 +48,10 @@ export class MapComponent implements OnInit {
           var projection = this.getProjection(),
               padding = 10;
 
-          console.log(d3.entries(this.dataset)); // Not getting the dataset in
+          console.log(d3.entries(wildfireData)); // Not getting the dataset in
 
           var marker = layer.selectAll("svg")
-              .data(d3.entries(this.dataset))
+              .data(d3.entries(wildfireData))
               .each(transform) // update existing markers
               .enter().append("svg")
               .each(transform)
@@ -70,7 +72,7 @@ export class MapComponent implements OnInit {
               .text(function(d) { return d.key; });
 
           function transform(d) {
-            d = new google.maps.LatLng(oregon[1], oregon[0]);
+            d = new google.maps.LatLng(d.value[1], d.value[0]);
             d = projection.fromLatLngToDivPixel(d);
             return d3.select(this)
                 .style("left", (d.x - padding) + "px")
