@@ -14,12 +14,12 @@
       <app-map></app-map>
     </div>
 </section>
-<section>
+<section id="gallery">
   <app-gallery></app-gallery>
 </section>
-<section *ngIf="currentRoute === '/galleries/'">
+<section id="gallery-detail" *ngIf="currentRoute === '/galleries/'">
   <app-gallery-detail></app-gallery-detail>
 </section>
-<section>
+<section id="safety">
   <app-safety></app-safety>
 </section>
