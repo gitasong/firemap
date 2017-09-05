@@ -17,7 +17,5 @@
 }
 
 .fires circle {
-  fill: brown;
-  stroke: black;
-  stroke-width: 1.5px;
+  fill: rgba(208, 94, 8, 0.7);
 }
