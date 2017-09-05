@@ -94,6 +94,11 @@ section#safety {
   min-height: auto;
 }
 
+section#map-component {
+  height: auto;
+  padding-bottom: 8rem;
+}
+
 #map-component {
   background-color: #000000;
   margin-top: 4rem;
