@@ -91,7 +91,7 @@ section#gallery {
 }
 
 section#safety {
-  min-height: 100vh;
+  min-height: auto;
 }
 
 #map-component {
