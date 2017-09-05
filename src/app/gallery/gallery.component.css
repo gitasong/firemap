@@ -21,7 +21,6 @@
 
 .panel-image {
   align-self: stretch;
-  /*height: inherit;*/
   position: relative;
   overflow: hidden;
 }

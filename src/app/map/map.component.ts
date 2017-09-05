@@ -29,32 +29,11 @@ export class MapComponent implements OnInit {
           map: map
         });
         georssLayer.setMap(map);
-        
-
-  //   for(var i = 0; i < this.wildfires.length; i++) {
-  //     var title = this.wildfires[i].title;
-  //     var description = this.wildfires[i].description;
-  //     var marker = new google.maps.Marker({
-  //       position: {lat: this.wildfires[i].lat, lng: this.wildfires[i].lng},
-  //       map: map,
-  //       animation: google.maps.Animation.DROP,
-  //       icon: image,
-  //       title: title,
-  //       description: description
-  //     });
-  //     marker.addListener('click', function() {
-  //       var infowindow = new google.maps.InfoWindow({
-  //         content: this.title + "<br>" + '<a href=' + this.description + '>' + this.description + '</a>'
-  //       });
-  //       infowindow.open(map, this);
-  //     });
-  //   }
   }
 
   getWildfireData() {
     this.wildfireData.getWildfireData().subscribe(response => {
       var call = response.json();
-      console.log(call);
       for(var i = 0; i < call.events.length; i++) {
         var title = call.events[i].title;
         var description = call.events[i].sources[0].url;
@@ -71,10 +50,3 @@ export class MapComponent implements OnInit {
     this.getWildfireData()
   }
 }
-
-// interface marker {
-//   title?:string;
-//   description: string;
-//   lat: number;
-//   lng: number;
-// }
