@@ -72,7 +72,7 @@ export class MapComponent implements OnInit {
               .text(function(d) { return d.key; });
 
           function transform(d) {
-            d = new google.maps.LatLng(d.value[1], d.value[0]);
+            d = new google.maps.LatLng(d.value[0], d.value[1]);
             d = projection.fromLatLngToDivPixel(d);
             return d3.select(this)
                 .style("left", (d.x - padding) + "px")
