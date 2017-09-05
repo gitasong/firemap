@@ -55,7 +55,7 @@ export class MapComponent implements OnInit {
               .each(transform) // update existing markers
               .enter().append("svg")
               .each(transform)
-              .attr("class", "marker");
+              .attr("class", "fires");
           console.log(marker);
 
           // Add a circle.
@@ -65,11 +65,11 @@ export class MapComponent implements OnInit {
               .attr("cy", padding);
 
           // Add a label.
-          marker.append("text")
-              .attr("x", padding + 7)
-              .attr("y", padding)
-              .attr("dy", ".31em")
-              .text(function(d) { return d.key; });
+          // marker.append("text")
+          //     .attr("x", padding + 7)
+          //     .attr("y", padding)
+          //     .attr("dy", ".31em")
+          //     .text(function(d) { return d.key; });
 
           function transform(d) {
             d = new google.maps.LatLng(d.value[0], d.value[1]);
