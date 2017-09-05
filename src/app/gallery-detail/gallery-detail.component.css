@@ -1,3 +1,23 @@
 .container {
-  color: white;
+  color: #000000;
+}
+
+.gallery-container h2, .gallery-container p {
+  color: #ffffff;
+}
+
+.gallery-body {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-column-gap: 5%;
+  grid-template-rows: 20%;
+  grid-row-gap: 4rem;
+}
+
+.item-image {
+  align-self: stretch;
+  position: relative;
+  overflow: hidden;
+  height: 300px;
+  width: 100%;
 }

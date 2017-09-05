@@ -1,30 +1,120 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /*background-color: #000000;*/
+}
+
+app-root {
+  background-color: #000000;
+}
+
+header {
+  height: 100vh;
+  background-image: url("./assets/images/burning-forest.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1.title {
+  display: inline-block;
+  padding: 2rem;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 2rem;
+}
+
+.btn.enter, .map-buttons .btn {
+  background-color: rgba(255, 255, 255, 0.0);
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  padding: 1rem;
+}
+
+.btn.enter:hover, .map-buttons .btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #000000;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  padding: 1rem;
+}
+
+.map-buttons button a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.map-buttons button a:hover {
+  color: #000000;
+}
+
+router-outlet {
+  display: flex;
+  flex: 1 0 0;
+}
+
+section, app-home-page {
+  height: 100vh;
+  margin: 0;
+}
+
+#map-component {
+  background-color: #000000;
+  margin-top: 4rem;
+}
+
+footer {
+  height: 8rem;
+  color: #ffffff;
+  text-align: center;
+}
+
 h1 {
   text-align: center;
 }
 
-.jumbotron {
-  background-image: url("./assets/images/telefire.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  font-style: italic;
-  font-family: sans-serif;
+#map-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
-.jumbotron h1 {
-  color: white !important;
-}
-
-.body {
-  background-color: black;
-}
-
-.home-text {
-  color: white;
-  font-family: sans-serif;
+.map-headings {
+  color: #ffffff;
+  margin-bottom: 4rem;
 }
 
 #map {
-  height: 500px;
+  height: 600px;
 }
 
 .tip-list {
