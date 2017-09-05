@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { WildfireApiService } from '../wildfire-api.service'
 import { Wildfire } from '../wildfire.model';
 import { MapsAPILoader } from 'angular2-google-maps/core';
-import * as d3 from "d3";
+import * as d3 from 'd3';
 
 declare var google;
 
