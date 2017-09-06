@@ -18,6 +18,7 @@ You will need the following properly installed on your computer.
 * [Angular2](https://angular.io/)
 * [Angular CLI](https://github.com/angular/angular-cli)
 * [TypeScript](http://www.typescriptlang.org/index.html)
+* [Deepstream Server](https://deepstreamhub.com/open-source/)
 
 * Once installed, you will need to install bower globally:
 * `$ npm install bower -g`
@@ -42,6 +43,10 @@ The app will use angular-cli and assets and dependencies packaged with it.
 * Get an API key from [Google Maps](https://developers.google.com/maps/documentation/javascript/get-api-key).
 * Create a file in your project app  folder called api-keys.ts.
 * Within the api-keys.ts file, type "export var masterGoogleMapConfig = { apiKey: "YOUR-API-KEY" }". Be sure to add this file to .gitignore.
+
+## Deepstream server
+
+Run `deepstream start` in a new command line tab.
 
 ## Development server
 
