@@ -2,18 +2,22 @@
 
 ## Wildfire Map 08/31/2017
 
-_Group Project By Nicole Freed, Dylan Lewis, Jacob Ruleaux, Nathan Stewart_
+_Eipcodus-JavaScript Group Project By Nicole Freed, Dylan Lewis, Jacob Ruleaux, Nathan Stewart_
 
 ## Description
 
-The application displays current wild fire locations on a map of the U.S. Additional fire data is displayed by clicking on the fire icon.
+The application displays current wild fire locations on a map. Additional fire data is displayed by clicking on the icons.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
 ## Prerequisites
 
+You will need the following properly installed on your computer.
+
 * [Node.js](https://nodejs.org/) (with NPM)
-* [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+* [Angular2](https://angular.io/)
+* [Angular CLI](https://github.com/angular/angular-cli)
+* [TypeScript](http://www.typescriptlang.org/index.html)
 
 * Once installed, you will need to install bower globally:
 * `$ npm install bower -g`
@@ -37,7 +41,7 @@ The app will use angular-cli and assets and dependencies packaged with it.
 
 * Get an API key from [Google Maps](https://developers.google.com/maps/documentation/javascript/get-api-key).
 * Create a file in your project app  folder called api-keys.ts.
-* Within the api-keys.ts file, type "export var masterGoogleMapConfig = { }" and paste your copied google map code between the curly braces. Be sure to add this file to .gitignore.
+* Within the api-keys.ts file, type "export var masterGoogleMapConfig = { apiKey: "YOUR-API-KEY" }". Be sure to add this file to .gitignore.
 
 ## Development server
 
