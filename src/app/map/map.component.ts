@@ -60,7 +60,7 @@ export class MapComponent implements OnInit {
 
           // Add a circle.
           marker.append("circle")
-              .attr("r", 4.5)
+              .attr("r", 7)
               .attr("cx", padding)
               .attr("cy", padding);
 
