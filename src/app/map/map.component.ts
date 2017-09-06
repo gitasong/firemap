@@ -30,23 +30,24 @@ export class MapComponent implements OnInit {
         });
         georssLayer.setMap(map);
   }
-
-  getWildfireData() {
-    this.wildfireData.getWildfireData().subscribe(response => {
-      var call = response.json();
-      for(var i = 0; i < call.events.length; i++) {
-        var title = call.events[i].title;
-        var description = call.events[i].sources[0].url;
-        var lng = call.events[i].geometries[0].coordinates[0];
-        var lat = call.events[i].geometries[0].coordinates[1];
-        var newWildfire = new Wildfire(title, description, lat, lng);
-        this.wildfires.push(newWildfire)
-      }
-      this.initMap()
-    })
-  }
-
+//This code, along with wildfireApiService will be saved for possible future use.
+  // getWildfireData() {
+  //   this.wildfireData.getWildfireData().subscribe(response => {
+  //     var call = response.json();
+  //     for(var i = 0; i < call.events.length; i++) {
+  //       var title = call.events[i].title;
+  //       var description = call.events[i].sources[0].url;
+  //       var lng = call.events[i].geometries[0].coordinates[0];
+  //       var lat = call.events[i].geometries[0].coordinates[1];
+  //       var newWildfire = new Wildfire(title, description, lat, lng);
+  //       this.wildfires.push(newWildfire)
+  //     }
+  //     this.initMap()
+  //   })
+  // }
+  //
   ngOnInit() {
-    this.getWildfireData()
+    // this.getWildfireData()
+    this.initMap();
   }
 }
