@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { MapComponent } from './map/map.component';
 import { GalleryDetailComponent } from './gallery-detail/gallery-detail.component';
 import { SafetyComponent } from './safety/safety.component';
+import { ChatComponent } from './chat/chat.component';
 
 const appRoutes: Routes = [
 
@@ -18,6 +19,10 @@ const appRoutes: Routes = [
   {
     path: 'safety',
     component: SafetyComponent
+  },
+  {
+    path: 'chat',
+    component: ChatComponent
   }
  ];
 

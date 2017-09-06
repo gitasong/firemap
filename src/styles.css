@@ -137,3 +137,12 @@ h1 {
 .tip-list {
   list-style-image: url("./assets/Fire_Emoji_small.png");
 }
+
+.compose {
+  text-align: center;
+}
+
+.chats {
+  width: 400px;
+  height: 100px;
+}

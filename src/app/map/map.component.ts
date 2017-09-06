@@ -30,6 +30,7 @@ export class MapComponent implements OnInit {
         });
         georssLayer.setMap(map);
   }
+<<<<<<< HEAD
 //This code, along with wildfireApiService will be saved for possible future use.
   // getWildfireData() {
   //   this.wildfireData.getWildfireData().subscribe(response => {
@@ -46,6 +47,25 @@ export class MapComponent implements OnInit {
   //   })
   // }
   //
+=======
+
+  getWildfireData() {
+    this.wildfireData.getWildfireData().subscribe(response => {
+      var call = response.json();
+      console.log(call);
+      for(var i = 0; i < call.events.length; i++) {
+        var title = call.events[i].title;
+        var description = call.events[i].sources[0].url;
+        var lng = call.events[i].geometries[0].coordinates[0];
+        var lat = call.events[i].geometries[0].coordinates[1];
+        var newWildfire = new Wildfire(title, description, lat, lng);
+        this.wildfires.push(newWildfire);
+      }
+      this.initMap()
+    })
+  }
+
+>>>>>>> chatbox
   ngOnInit() {
     // this.getWildfireData()
     this.initMap();
