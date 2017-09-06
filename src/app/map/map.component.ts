@@ -64,12 +64,27 @@ export class MapComponent implements OnInit {
               .attr("cx", padding)
               .attr("cy", padding);
 
+          // marker.append("rect")  // attempt to put the text in its own (popup) box, but Google Maps won't allow click and mouseover events (that functionality has been coopted by the dragger hand)
+          //     .attr("x", padding + 10)
+          //     .attr("y", padding)
+              // .attr("width", 100)
+              // .attr("height", 200)
+              // .attr("background-color", "rgba(255, 255, 255, 0.5)");
+
           // Add a label.
-          marker.append("text")
-              .attr("x", padding + 7)
-              .attr("y", padding)
-              .attr("dy", ".31em")
-              .text(function(d) { return [d.value[2], d.value[3]]; });
+          // marker.append("text")  // fire name
+          //     .attr("x", padding + 7)
+          //     .attr("y", padding)
+          //     .attr("dy", ".31em")
+          //     .attr("fill", "gray")
+          //     .text(function(d) { return d.value[2]; });
+
+          // marker.append("text")  // fire InciWeb link
+          //     .attr("x", padding + 7)
+          //     .attr("y", padding + 10)
+          //     .attr("dy", ".31em")
+          //     .attr("fill", "gray")
+          //     .text(function(d) { return d.value[3]; });
 
           function transform(d) {
             d = new google.maps.LatLng(d.value[0], d.value[1]);
