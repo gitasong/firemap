@@ -65,11 +65,11 @@ export class MapComponent implements OnInit {
               .attr("cy", padding);
 
           // Add a label.
-          // marker.append("text")
-          //     .attr("x", padding + 7)
-          //     .attr("y", padding)
-          //     .attr("dy", ".31em")
-          //     .text(function(d) { return d.key; });
+          marker.append("text")
+              .attr("x", padding + 7)
+              .attr("y", padding)
+              .attr("dy", ".31em")
+              .text(function(d) { return [d.value[2], d.value[3]]; });
 
           function transform(d) {
             d = new google.maps.LatLng(d.value[0], d.value[1]);
@@ -98,7 +98,7 @@ export class MapComponent implements OnInit {
         this.wildfires.push(newWildfire)
       }
       for(var i = 0; i < this.wildfires.length; i++) {
-        var fire: number[] = [this.wildfires[i].lat, this.wildfires[i].lng];
+        var fire: any[] = [this.wildfires[i].lat, this.wildfires[i].lng, this.wildfires[i].title, this.wildfires[i].description];
         this.dataset.push(fire)
       }
       // console.log(this.dataset);
