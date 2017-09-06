@@ -59,7 +59,7 @@ export class MapComponent implements OnInit {
         var lng = call.events[i].geometries[0].coordinates[0];
         var lat = call.events[i].geometries[0].coordinates[1];
         var newWildfire = new Wildfire(title, description, lat, lng);
-        this.wildfires.push(newWildfire)
+        this.wildfires.push(newWildfire);
       }
       this.initMap()
     })

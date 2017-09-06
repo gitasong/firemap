@@ -13,6 +13,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryDetailComponent } from './gallery-detail/gallery-detail.component';
 import { SafetyComponent } from './safety/safety.component';
 import { masterGoogleMapConfig } from './api-keys';
+import { ChatComponent } from './chat/chat.component';
 
 export const googleMapConfig = {
   apiKey: masterGoogleMapConfig.apiKey,
@@ -25,7 +26,8 @@ export const googleMapConfig = {
     MapComponent,
     GalleryComponent,
     GalleryDetailComponent,
-    SafetyComponent
+    SafetyComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
