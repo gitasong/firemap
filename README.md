@@ -38,6 +38,10 @@ The app will use angular-cli and assets and dependencies packaged with it.
 * `$ npm install`
 * `$ bower install`
 
+Notice: The d3 branch is vastly different than the master. If you wish to view the d3 branch, it will need to be cloned separately.
+
+`$ git clone -b <branch-name> --single-branch <repository-url>`
+
 #### API Keys
 
 * Get an API key from [Google Maps](https://developers.google.com/maps/documentation/javascript/get-api-key).
