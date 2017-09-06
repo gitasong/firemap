@@ -4,7 +4,7 @@ export const GALLERIES: Gallery[] = [
   new Gallery("High Cascades Complex Fire", ["./assets/images/Cascades/CascadesCamp.jpeg", "./assets/images/Cascades/CascadesCrew.jpeg", "./assets/images/Cascades/CascadesLine.jpeg", "./assets/images/Cascades/CascadesNight.jpeg"], 1),
   new Gallery("Chetco Bar Fire", ["./assets/images/Chetco/ChetcoDark.jpeg", "./assets/images/Chetco/ChetcoNight.jpeg", "./assets/images/Chetco/ChetcoNightAir.png", "./assets/images/Chetco/ChetcoSmoke.jpeg", "./assets/images/Chetco/ChetcoStructure.png"], 2),
   new Gallery("Cinder Butte Fire", ["./assets/images/Cinder/CinderFlame.jpeg", "./assets/images/Cinder/CinderScar.jpeg"], 3),
-  new Gallery("Eagle Creek Fire", ["./assets/images/Eagle/EagleDay.jpeg", "./assets/images/Eagle/EagleMt.jpeg", "./assets/images/Eagle/EagleNight.jpeg", "./assets/images/Eagle/EagleView.jpeg"], 4),
+  new Gallery("Eagle Creek Fire", ["./assets/images/Eagle/EagleDay.jpeg", "./assets/images/Eagle/EagleMt.jpeg", "./assets/images/Eagle/EagleNight.jpeg", "./assets/images/Eagle/EagleView.jpeg", "./assets/images/Eagle/EagleBurn.jpeg"], 4),
   new Gallery("Falcon Complex Fire", ["./assets/images/Falcon/FalconShadow.png", "./assets/images/Falcon/FalconBomb.jpeg", "./assets/images/Falcon/FalconBombed.jpeg", "./assets/images/Falcon/FalconCrew.jpeg", "./assets/images/Falcon/FalconTorch.jpeg"], 5),
   new Gallery("Horse Creek Complex Fire", ["./assets/images/HorseCreek/HorseAerial.jpeg", "./assets/images/HorseCreek/HorseAvenue.jpeg"], 6),
   new Gallery("Jones Fire", ["./assets/images/Jones/JonesMoon.jpeg", "./assets/images/Jones/JonesScoop.jpeg", "./assets/images/Jones/JonesSnag.jpeg", "./assets/images/Jones/JonesTruck.jpeg"], 7),

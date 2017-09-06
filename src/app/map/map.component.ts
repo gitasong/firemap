@@ -19,60 +19,35 @@ export class MapComponent implements OnInit {
   constructor(private wildfireData: WildfireApiService) { }
 
   initMap() {
-    var image = {
-      url: "../assets/Fire_Emoji_grande.png",
-    }
-    var oregon = {lat: 43.8136, lng: -120.6027};
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 5,
-      center: oregon,
-      mapTypeId: 'terrain'
+      zoom: 7,
+      center: {lat: 43.8136, lng: -120.6027}
     });
 
-    for(var i = 0; i < this.wildfires.length; i++) {
-      var title = this.wildfires[i].title;
-      var description = this.wildfires[i].description;
-      var marker = new google.maps.Marker({
-        position: {lat: this.wildfires[i].lat, lng: this.wildfires[i].lng},
-        map: map,
-        animation: google.maps.Animation.DROP,
-        icon: image,
-        title: title,
-        description: description
-      });
-      marker.addListener('click', function() {
-        var infowindow = new google.maps.InfoWindow({
-          content: this.title + "<br>" + '<a href=' + this.description + '>' + this.description + '</a>'
+    var georssLayer = new google.maps.KmlLayer({
+          url: 'https://inciweb.nwcg.gov/feeds/maps/kml/?cm.ttl=600',
+          map: map
         });
-        infowindow.open(map, this);
-      });
-    }
+        georssLayer.setMap(map);
   }
-
-  getWildfireData() {
-    this.wildfireData.getWildfireData().subscribe(response => {
-      var call = response.json();
-      console.log(call);
-      for(var i = 0; i < call.events.length; i++) {
-        var title = call.events[i].title;
-        var description = call.events[i].sources[0].url;
-        var lng = call.events[i].geometries[0].coordinates[0];
-        var lat = call.events[i].geometries[0].coordinates[1];
-        var newWildfire = new Wildfire(title, description, lat, lng);
-        this.wildfires.push(newWildfire)
-      }
-      this.initMap()
-    })
-  }
-
+//This code, along with wildfireApiService will be saved for possible future use.
+  // getWildfireData() {
+  //   this.wildfireData.getWildfireData().subscribe(response => {
+  //     var call = response.json();
+  //     for(var i = 0; i < call.events.length; i++) {
+  //       var title = call.events[i].title;
+  //       var description = call.events[i].sources[0].url;
+  //       var lng = call.events[i].geometries[0].coordinates[0];
+  //       var lat = call.events[i].geometries[0].coordinates[1];
+  //       var newWildfire = new Wildfire(title, description, lat, lng);
+  //       this.wildfires.push(newWildfire)
+  //     }
+  //     this.initMap()
+  //   })
+  // }
+  //
   ngOnInit() {
-    this.getWildfireData()
+    // this.getWildfireData()
+    this.initMap();
   }
 }
-
-// interface marker {
-//   title?:string;
-//   description: string;
-//   lat: number;
-//   lng: number;
-// }

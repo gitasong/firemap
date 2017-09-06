@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 style="color: orange">Emergency Response Message Room</h1>
+
+  <div class="chats">
+    <p *ngFor="let chat of chatArray"><strong><span style="color: red;">{{chat.username}}: </span></strong> <span style="color: white;">{{chat.text}}</span></p>
+  </div>
+
+  <div class="compose">
+    <input class="chat" type="text" [(ngModel)]="text">
+    <button class="btn btn-warning"(click)="addChat()">Send</button>
+  </div>
+</div>
