@@ -1,17 +1,20 @@
-  <div class="jumbotron">
-    <header>
-      <div class="container">
-        <h1>
+
+<header id="home">
+  <div class="overlay">
+    <div class="content">
+      <div class="container title-container">
+        <h1 class="title">
           {{title}}
         </h1>
-        <p><a class="link" routerLink="">Home</a></p>
-        <p><a class="link" routerLink="safety">Fire Safety</a></p>
       </div>
-    </header>
+      <div class="container links">
+        <a class="btn enter" href="#map-component">Enter At Your Own Risk</a>
+      </div>
+    </div>
   </div>
-  <!-- <div class="container">
-  </div> -->
-  <router-outlet></router-outlet>
+</header>
+<router-outlet></router-outlet>
+<footer>Footer stuff goes here.</footer>
 
 
 

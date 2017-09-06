@@ -1,25 +1,23 @@
+.panel {
+  border: none;
+}
+
 .panel-heading {
-  /*background-image: url("/assets/images/telefire.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;*/
   background-color: black;
   color: white;
+  border-bottom: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .panel-body {
-  /*background-image: url("/assets/images/wildfire.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  color: black;
-  text-shadow: 1px 1px white;*/
   display: grid;
   overflow: hidden;
   background-color: #000000;
+  padding: 0;
 }
-
-/*.panel-height {
-  height: 800px;
-}*/
 
 .panel-image {
   align-self: stretch;
@@ -36,12 +34,14 @@
 .panel-listings {
   position: absolute;
   overflow-y: scroll;
-  right: 80%;
+  right: 81%;
   height: 100%;
   background-color: rgba(250, 210, 28, 0.7);
-  padding: 3rem 2rem 2rem 2rem;
-  line-height: 1.7rem;
+  padding: 1rem 2rem 2rem 2rem;
+  line-height: 1rem;
   z-index: 999;
+  display: flex;
+  flex-direction: column;
 }
 
 .panel-listings::-webkit-scrollbar {
@@ -51,4 +51,17 @@
 .panel-listings::-webkit-scrollbar-thumb {
   background-color: rgba(225, 185, 5, 1);
   min-height: 20px !important;
+}
+
+h5.panel-listing {
+  margin-top: 0;
+}
+
+.panel-listing {
+  color: #333333;
+}
+
+.panel-listing:hover {
+  color: #666666;
+  cursor: pointer;
 }
